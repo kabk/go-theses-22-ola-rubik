@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Erika';
-    src: url('../fonts/Erika/G2-Erika-Regular.woff2');
+    src: url( '../fonts/Erika/G2-Erika-Regular.woff2' ) format( 'woff2' );
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Modor';
-    src: url('../fonts/Modor/Modor-Regular.otf');
+    src: url( '../fonts/Modor/Modor-Regular.otf' ) format( 'opentype' );
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'ModorSwash';
-    src: url('../fonts/Modor/Modor-Swash.otf');
+    src: url( '../fonts/Modor/Modor-Swash.otf' ) format( 'opentype' );
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -52,7 +52,7 @@
 html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
-  background-color: var(--color-background);  
+  background-color: var(--color-background); 
 }
 
 
@@ -85,12 +85,14 @@ html {
 }
 
 .text-box {
+    width: 780px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 calc((var(--margin))*5);
     text-align: justify;
     text-justify: inter-word;
-    padding-left: calc((var(--margin))*5);
-    padding-right: calc((var(--margin))*5);
-    margin: calc((var(--margin))*10);
-    margin-bottom: 0;
+    background-color: aquamarine;
+    box-sizing: border-box;
 }
 
 .initial-letter{
@@ -121,16 +123,24 @@ html {
 
 
 .footnotes{
+    width: 780px;
+    max-width: 100%;
+    margin: calc(var(--margin) * 0.5) 0;
+    padding: 0 calc(var(--margin)*5);
+    
     font: calc(var(--font-size)*0.75) var(--font-family);
     text-align: justify;
     text-justify: inter-word;
-    text-justify: inter-word; 
+    
+/*
     padding-left: calc((var(--margin))*5);
     padding-right: calc((var(--margin))*5);
     margin: calc((var(--margin))*10);
     margin-top: calc((var(--margin))*0.5);
     margin-bottom: calc((var(--margin))*0.5);
+*/
     background-color: lightgoldenrodyellow;
+    box-sizing: border-box;
 }
 
 .footnotes-box-one.footnotes.footnotes-hidden{
@@ -214,7 +224,7 @@ button.button-2.opens-footnote{
 
 /* responsive typeface */
 
-@media (max-width: 298px) { 
+/*@media (max-width: 298px) { 
   :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);} 
 }
 @media (min-width: 299px) and (max-width: 339px) { 
@@ -246,16 +256,24 @@ button.button-2.opens-footnote{
 }
 @media (min-width: 1880px) { 
   :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
-}
+}*/
 
 /* website media queries */
+
 
 @media (max-width: 779px) {
     
     /* utilities */
   .desktop{display:none!important;}
   .mobile{display:block;}
+    
+    
+    .text-box, .footnotes {
+        padding: 0 calc(100 * 90% / 780);
+        
+    }
 
+/*
     .text-box {
         padding-top: calc((var(--margin))*3);
     padding-left: calc((var(--margin))*2);
@@ -270,6 +288,7 @@ button.button-2.opens-footnote{
     margin: calc((var(--margin))*1);
     background-color: lightblue;
     }
+*/
 
 @media (max-width: 480px) {
 
@@ -283,6 +302,7 @@ button.button-2.opens-footnote{
 
   /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
 
+/*
     .text-box {
     padding-top: calc((var(--margin))*5);
     padding-left: calc((var(--margin))*4);
@@ -297,6 +317,7 @@ button.button-2.opens-footnote{
     margin: calc((var(--margin))*2);
     background-color: lightblue;
     }
+*/
 
     
 }
