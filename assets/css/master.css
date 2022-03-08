@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+@font-face {
+    font-family: 'Erika';
+    src: url('../fonts/Erika/G2-Erika-Regular.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Modor';
+    src: url('../fonts/Modor/Modor-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'ModorSwash';
+    src: url('../fonts/Modor/Modor-Swash.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* VARIABLES */
+
+:root {
+  /* Color settings */
+  --color-background: white;
+  --color-text: black;
+  --color-text-link: rgba(255,255,255,1);
+  --color-text-link-hover: rgba(0,255,0,1);
+  /* Font settings */
+  --font-family: 'Erika', 'Helvetica', 'Arial', sans-serif;
+  --font-family-body-text: 'Modor', serif;
+  --font-family-initial-letter: 'ModorSwash', serif;
+  --font-size: 18px;
+  /* Margins settings */
+  --margin: 1rem;
+}
+
+/*-------------------------------------------------------------------------*/
+
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);  
+}
+
+
+.wrapper-one {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+}
+
+.header-image{
+    background-color: grey;
+    margin: 0rem;
+    padding: 0rem;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.chapter-container{
+    padding-top: calc((var(--margin))*1);
+    display: flex;
+    align-items: flex-start;
+    background-color: lightblue;
+    height: calc((100vh)*1.5);
+}
+
+.chapter-name{
+    position: sticky;
+    top: var(--margin);
+    font: calc(var(--font-size)*5) var(--font-family-body-text);
+    padding-left: var(--margin);
+}
+
+.text-box {
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: calc((var(--margin))*5);
+    padding-right: calc((var(--margin))*5);
+    margin: calc((var(--margin))*10);
+    margin-bottom: 0;
+}
+
+.initial-letter{
+    font: calc(var(--font-size)*5) var(--font-family-initial-letter);
+    color: var(--color-text);
+    padding: 0px;
+    margin-right: -63px;
+    line-height: 0rem; 
+}
+
+.special-sup{
+    font: calc(var(--font-size)*1) var(--font-family-body-text);
+    padding-right: calc(var(--margin)*0.4);
+}
+
+.button-wrapper{
+    padding-left: calc((var(--margin))*5);
+    padding-right: calc((var(--margin))*5);
+    margin: calc((var(--margin))*10);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+/*FOOTNOTES*/
+
+
+.footnotes{
+    font: calc(var(--font-size)*0.75) var(--font-family);
+    text-align: justify;
+    text-justify: inter-word;
+    text-justify: inter-word; 
+    padding-left: calc((var(--margin))*5);
+    padding-right: calc((var(--margin))*5);
+    margin: calc((var(--margin))*10);
+    margin-top: calc((var(--margin))*0.5);
+    margin-bottom: calc((var(--margin))*0.5);
+    background-color: lightgoldenrodyellow;
+}
+
+.footnotes-box-one.footnotes.footnotes-hidden{
+    display:none;
+}
+
+button.button-1.opens-footnote{
+    display:block;
+    width:2rem;
+    height:2rem;
+    border: none;
+    background-color: yellow;
+    z-index:99;
+}
+
+button.button-2.opens-footnote{
+    display:block;
+    width:2rem;
+    height:2rem;
+    border: none;
+    background-color: yellow;
+    z-index:99;  
+}
+
+.footnote-is-closed{
+    display:block;
+}
+
+.footnote-is-opened{
+    display:none;
+}
+/*-------------------------------------------------------------------------*/
+
+.image-box{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.images{
+    width: 100%;
+    height: auto;  
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/*-------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/* GENERAL USABILITY */
+
+/* hide desktop mobile etc */
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+
+/* if you want to hide something visually but want to keep it readable / accessible for screen readers (sr) */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* MEDIA QUERIES */
+
+/* responsive typeface */
+
+@media (max-width: 298px) { 
+  :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 299px) and (max-width: 339px) { 
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 340px) and (max-width: 439px) { 
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 440px) and (max-width: 599px) { 
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 600px) and (max-width: 779px) { 
+  :root{ --font-size: 17px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 780px) and (max-width: 992px) { 
+  :root{ --font-size: 17px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 993px) and (max-width: 1200px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1201px) and (max-width: 1319px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1320px) and (max-width: 1619px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1620px) and (max-width: 1879px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1880px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+
+/* website media queries */
+
+@media (max-width: 779px) {
+    
+    /* utilities */
+  .desktop{display:none!important;}
+  .mobile{display:block;}
+
+    .text-box {
+        padding-top: calc((var(--margin))*3);
+    padding-left: calc((var(--margin))*2);
+    padding-right: calc((var(--margin))*2);
+    margin: calc((var(--margin))*1);
+    }
+    
+    .footnotes{
+   
+    padding-left: calc((var(--margin))*2);
+    padding-right: calc((var(--margin))*2);
+    margin: calc((var(--margin))*1);
+    background-color: lightblue;
+    }
+
+@media (max-width: 480px) {
+
+  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+    
+
+}
+
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+    .text-box {
+    padding-top: calc((var(--margin))*5);
+    padding-left: calc((var(--margin))*4);
+    padding-right: calc((var(--margin))*4);
+    margin: calc((var(--margin))*2);
+    }
+    
+    .footnotes{
+   
+    padding-left: calc((var(--margin))*4);
+    padding-right: calc((var(--margin))*4);
+    margin: calc((var(--margin))*2);
+    background-color: lightblue;
+    }
+
+    
+}
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* use this query to apply style for 'small' desktop screens */
+
+}
+
+
