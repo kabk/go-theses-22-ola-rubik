@@ -4,7 +4,11 @@
 
 @font-face {
     font-family: 'Erika';
-    src: url( '../fonts/Erika/G2-Erika-Regular.woff2' ) format( 'woff2' );
+    src: url('../fonts/Erika/G2-Erika-Regular.woff2'),
+         url('../fonts/Erika/G2-Erika-Regular.woff'),
+         url('../fonts/Erika/G2-Erika-Regular.eot'),
+         url('../fonts/Erika/G2-Erika-Regular.otf') format('embedded-opentype'),
+         url('../fonts/Erika/G2-Erika-Regular.ttf') format('truetype');  
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -25,15 +29,6 @@
     font-style: normal;
     font-display: block;
 }
-
-@font-face {
-    font-family: 'Trattatello';
-    src: url( '../fonts/Trattatello/Trattatello.ttf' ) format( 'opentype' );
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
 
 /* VARIABLES */
 
