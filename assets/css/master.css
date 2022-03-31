@@ -63,7 +63,6 @@ html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background); 
-  line-height: calc(var(--font-size)*5);
 }
 
 body {
@@ -106,12 +105,38 @@ a:hover     {
 
 .wrapper-one {
   font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
 }
 
 .wrapper-two {
   font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
 }
 
+.wrapper-three {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
+}
+
+.wrapper-four {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
+}
+
+.wrapper-five {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
+}
+
+.wrapper-six {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
+}
+
+.wrapper-seven {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+  line-height: calc(var(--font-size)*1.6);
+}
 
 .header-image{
     top: 0;
@@ -142,7 +167,7 @@ a:hover     {
 }
 
 .black-box{
-    height: 100vh;
+    height: 50vh;
     background-color: black;
 }
     
@@ -242,12 +267,13 @@ h2.chapter-name{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 calc(var(--margin)*2);
-    font: calc(var(--font-size)*0.95) var(--font-family);
+    font: calc(var(--font-size)*1) var(--font-family);
     color: var(--color-text);
     text-align: justify;
     text-justify: inter-word;
     box-sizing: border-box;
     display: none;
+    line-height: calc(var(--font-size)*1.2);
 }
 
 .footnotes-box.visible {
@@ -269,6 +295,7 @@ h2.chapter-name{
     max-width: 100%;
     height: auto;  
 }
+
 
 /*-------------------------------------------------------------------------*/
 
@@ -356,6 +383,168 @@ h2.chapter-name{
 .flip-box-2-back {
     transform: rotateY(180deg);
 }
+
+/* ----------------- */
+
+.flip-box-3 {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-3-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-3.active .flip-box-3-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-3-front, .flip-box-3-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-3-back {
+    transform: rotateY(180deg);
+}
+
+/* ----------------- */
+.flip-box-4 {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-4-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-4.active .flip-box-4-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-4-front, .flip-box-4-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-4-back {
+    transform: rotateY(180deg);
+}
+
+/* ----------------- */
+.flip-box-5 {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-5-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-5.active .flip-box-5-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-5-front, .flip-box-5-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-5-back {
+    transform: rotateY(180deg);
+}
+
+/* ----------------- */
+
+.flip-box-6 {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-6-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-6.active .flip-box-6-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-6-front, .flip-box-6-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-6-back {
+    transform: rotateY(180deg);
+}
+
+/* ----------------- */
+
+
 
 /*-------------------------------------------------------------------------*/
 
