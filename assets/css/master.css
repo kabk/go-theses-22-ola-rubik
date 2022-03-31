@@ -35,7 +35,7 @@
 :root {
   /* Color settings */
   --color-background: rgba(0, 0, 0, 1);
-  --color-text: white;
+  --color-text: rgba(237, 237, 232, 1);
   --color-text-two: rgba(255, 50, 50, 1);   
   --color-text-link: rgba(255,255,255,1);
   --color-text-link-hover: rgba(0,255,0,1);
