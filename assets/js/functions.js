@@ -1,25 +1,24 @@
-$(document).ready(function() {
+window.addEventListener( 'DOMContentLoaded', event => {
 
-// functions go here 
+	const toggleFootnotes = event => {
+		const clicked_element = event.target;
+		clicked_element.classList.toggle( 'active' );
+		
+		
+		const active_textbox = clicked_element.closest( '.text-box' );
+		const matching_footnotes = active_textbox.nextElementSibling;
+		
+		if ( clicked_element.classList.contains( 'active' ) ) {
+			matching_footnotes.classList.add( 'visible' );
+		} else {
+			matching_footnotes.classList.remove( 'visible' );
+		}
+	}
 
-    $('button.opens-footnote.footnote-is-closed').each(function(e){
-        
-        var $thisDataId = $(this).data('footnote-id');
-        
-       
-        
-        $('button.opens-footnote.footnote-is-closed').on('click', function(e){
-        $('.footnotes-box-one.footnotes').removeClass('footnotes-hidden');
-    });
-
-    $('button.opens-footnote.footnote-is-opened').on('click', function(e){
-        $('.footnotes-box-one.footnotes').addClass('footnotes-hidden');
-    });
-        
-        
-    });
-    
-    
-         
-});
-
+	const footnote_toggle_ch1 = document.querySelector( '.flip-box' );
+	footnote_toggle_ch1.addEventListener( 'click', toggleFootnotes );
+	
+	
+    const footnote_toggle_ch2 = document.querySelector( '.flip-box-2' );
+    footnote_toggle_ch2.addEventListener( 'click', toggleFootnotes );
+} );

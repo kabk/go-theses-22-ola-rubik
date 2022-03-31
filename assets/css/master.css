@@ -20,7 +20,15 @@
 
 @font-face {
     font-family: 'ModorSwash';
-    src: url( '../fonts/Modor/Modor-Swash.otf' ) format( 'opentype' );
+    src: url( '../fonts/Modor-Swash/Modor-Swash.otf' ) format( 'opentype' );
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Trattatello';
+    src: url( '../fonts/Trattatello/Trattatello.ttf' ) format( 'opentype' );
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -31,17 +39,19 @@
 
 :root {
   /* Color settings */
-  --color-background: white;
-  --color-text: black;
+  --color-background: rgba(0, 0, 0, 1);
+  --color-text: white;
+  --color-text-two: rgba(255, 50, 50, 1);   
   --color-text-link: rgba(255,255,255,1);
   --color-text-link-hover: rgba(0,255,0,1);
   /* Font settings */
   --font-family: 'Erika', 'Helvetica', 'Arial', sans-serif;
   --font-family-body-text: 'Modor', serif;
   --font-family-initial-letter: 'ModorSwash', serif;
+  --font-family-special: 'Trattatello', serif;
   --font-size: 18px;
   /* Margins settings */
-  --margin: 1rem;
+  --margin: 2rem;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -53,68 +63,173 @@ html {
   font: var(--font-size) var(--font-family);
   color: var(--color-text);
   background-color: var(--color-background); 
+  line-height: calc(var(--font-size)*5);
 }
 
+body {
+    hyphens: auto; 
+}
+
+.nav {
+    
+    font: calc(var(--font-size)*4) var(--font-family-body-text);
+    text-align: center;
+    margin: 0 auto; 
+    
+}
+
+a {
+    color: var(--color-text-two);
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    /*border-bottom: 3px solid red;*/
+}
+
+.endnotes a {
+    color: var(--color-text-two);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    
+}
+
+a:hover     {
+    color: white;
+    text-decoration-line: underline;
+}
+
+.endnotes a:hover {
+    color: var(--color-text-two);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    
+}
 
 .wrapper-one {
   font: calc(var(--font-size)*1.4) var(--font-family-body-text);
 }
 
+.wrapper-two {
+  font: calc(var(--font-size)*1.4) var(--font-family-body-text);
+}
+
+
 .header-image{
-    background-color: grey;
-    margin: 0rem;
-    padding: 0rem;
-    position: relative;
-    height: 100vh;
+    top: 0;
     width: 100vw;
+    height: auto;  
 }
 
+
+.header-image-phone{
+    display: none;
+    top: 0;
+    width: 100vw;
+    height: auto;  
+}
+
+.chapter-image{
+    top: 0;
+    width: 100vw;
+    height: auto;  
+}
+
+
+.chapter-image-phone{
+    display: none;
+    top: 0;
+    width: 100vw;
+    height: auto;  
+}
+
+.black-box{
+    height: 100vh;
+    background-color: black;
+}
+    
 .chapter-container{
+    
     padding-top: calc((var(--margin))*1);
-    display: flex;
-    align-items: flex-start;
-    background-color: lightblue;
-    height: calc((100vh)*1.5);
+    height: calc((100vh)*1);
+    text-align: center;
+    
+    
 }
 
-.chapter-name{
-    position: sticky;
+h2.chapter-name{
     top: var(--margin);
-    font: calc(var(--font-size)*5) var(--font-family-body-text);
-    padding-left: var(--margin);
-}
+    font: calc(var(--font-size)*4) var(--font-family-body-text);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-align: center;
 
-.text-box {
-    width: 780px;
+}
+/*.text-box {
+    width: 1400px;
     max-width: 100%;
-    margin: 0 auto;
-    padding: 0 calc((var(--margin))*5);
+    margin: 0 auto;  
+    padding: 0 calc((var(--margin))*2);
     text-align: justify;
     text-justify: inter-word;
-    background-color: aquamarine;
     box-sizing: border-box;
+}
+.text-box > div {
+	
+    width: max(40%, 700px);
+    max-width: 100%;
+    display: inline-block;
+}*/
+
+.text-box {
+    width: 830px;
+    max-width: 100%;
+    margin: 0 auto;  
+    padding: 0 calc((var(--margin))*2);
+    text-align: justify;
+    text-justify: inter-word;
+    box-sizing: border-box;
+    color: var(--color-text-two);
 }
 
 .initial-letter{
     font: calc(var(--font-size)*5) var(--font-family-initial-letter);
-    color: var(--color-text);
+    color: var(font-text-two);
     padding: 0px;
-    margin-right: -63px;
+    margin-right: -58px;
+    margin-bottom: 68px;
     line-height: 0rem; 
 }
 
 .special-sup{
     font: calc(var(--font-size)*1) var(--font-family-body-text);
     padding-right: calc(var(--margin)*0.4);
+    line-height: 0rem; 
 }
 
-.button-wrapper{
-    padding-left: calc((var(--margin))*5);
-    padding-right: calc((var(--margin))*5);
-    margin: calc((var(--margin))*10);
-    margin-top: 0;
-    margin-bottom: 0;
+.endnotes{
+    font: calc(var(--font-size)*1) var(--font-family);
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;  
+    padding: 0 calc((var(--margin))*2);
+    text-align: justify;
+    text-justify: inter-word;
+    box-sizing: border-box;
 }
+
+.endnotes a{
+    color: white;
+}
+
+.endnotes,.b {
+  padding-left: calc(var(--margin)*1) ;
+  padding-right: calc(var(--margin)*1) ;
+}
+
+.chapter-container-endnotes{
+    padding-top: calc((var(--margin))*1);
+    text-align: center;  
+}
+
 
 
 /*-------------------------------------------------------------------------*/
@@ -122,71 +237,125 @@ html {
 /*FOOTNOTES*/
 
 
-.footnotes{
-    width: 780px;
+.footnotes-box {
+    width: 830px;
     max-width: 100%;
-    margin: calc(var(--margin) * 0.5) 0;
-    padding: 0 calc(var(--margin)*5);
-    
-    font: calc(var(--font-size)*0.75) var(--font-family);
+    margin: 0 auto;
+    padding: 0 calc(var(--margin)*2);
+    font: calc(var(--font-size)*0.95) var(--font-family);
+    color: var(--color-text);
     text-align: justify;
     text-justify: inter-word;
-    
-/*
-    padding-left: calc((var(--margin))*5);
-    padding-right: calc((var(--margin))*5);
-    margin: calc((var(--margin))*10);
-    margin-top: calc((var(--margin))*0.5);
-    margin-bottom: calc((var(--margin))*0.5);
-*/
-    background-color: lightgoldenrodyellow;
     box-sizing: border-box;
+    display: none;
 }
 
-.footnotes-box-one.footnotes.footnotes-hidden{
-    display:none;
+.footnotes-box.visible {
+	display: block;
 }
 
-button.button-1.opens-footnote{
-    display:block;
-    width:2rem;
-    height:2rem;
-    border: none;
-    background-color: yellow;
-    z-index:99;
-}
 
-button.button-2.opens-footnote{
-    display:block;
-    width:2rem;
-    height:2rem;
-    border: none;
-    background-color: yellow;
-    z-index:99;  
-}
 
-.footnote-is-closed{
-    display:block;
-}
-
-.footnote-is-opened{
-    display:none;
-}
 /*-------------------------------------------------------------------------*/
 
 .image-box{
+    
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .images{
-    width: 100%;
+    width: max(25%, 299px);
+    max-width: 100%;
     height: auto;  
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
 }
+
 /*-------------------------------------------------------------------------*/
 
+/* The flip box container */
+
+.coin {
+    width: 70px;
+    height: auto;
+}
+.flip-box {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box.active .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-back {
+    transform: rotateY(180deg);
+}
+
+/* ----------------- */
+.flip-box-2 {
+    margin: 10px 0 0 0;
+    position: relative;
+    left: -10px;
+    width: 70px;
+    height: 70px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-box-2-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box-2.active .flip-box-2-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-2-front, .flip-box-2-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-2-back {
+    transform: rotateY(180deg);
+}
 
 /*-------------------------------------------------------------------------*/
 
@@ -261,71 +430,46 @@ button.button-2.opens-footnote{
 /* website media queries */
 
 
-@media (max-width: 779px) {
+@media screen and (max-width: 899px) {
     
     /* utilities */
   .desktop{display:none!important;}
   .mobile{display:block;}
+  
+  .header-image { display: none }
+  .header-image-phone { display: block }
     
+  .chapter-image { display: none }
+  .chapter-image-phone { display: block }
     
-    .text-box, .footnotes {
-        padding: 0 calc(100 * 90% / 780);
-        
+    .nav a:after {
+		width: 100%;
+		height: 0;
+		margin-top: -0.625em;
+		content: '';
+	    display: block;
     }
-
-/*
-    .text-box {
-        padding-top: calc((var(--margin))*3);
-    padding-left: calc((var(--margin))*2);
-    padding-right: calc((var(--margin))*2);
-    margin: calc((var(--margin))*1);
-    }
+    .nav,
+    h2.chapter-name { font-size: max(36px, 100vw * 72 / 899) }
     
-    .footnotes{
-   
-    padding-left: calc((var(--margin))*2);
-    padding-right: calc((var(--margin))*2);
-    margin: calc((var(--margin))*1);
-    background-color: lightblue;
+    .text-box, .footnotes-box {
+        padding: calc(100 * 90% / 899) calc(100 * 90% / 899) 0 calc(100 * 90% / 899); 
     }
-*/
-
-@media (max-width: 480px) {
-
-  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
-    
-
-}
-
-
-@media (max-width: 779px) and (orientation: landscape) {
-
-  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
-
-/*
-    .text-box {
-    padding-top: calc((var(--margin))*5);
-    padding-left: calc((var(--margin))*4);
-    padding-right: calc((var(--margin))*4);
-    margin: calc((var(--margin))*2);
-    }
-    
-    .footnotes{
-   
-    padding-left: calc((var(--margin))*4);
-    padding-right: calc((var(--margin))*4);
-    margin: calc((var(--margin))*2);
-    background-color: lightblue;
-    }
-*/
-
     
 }
-
-@media (min-width: 780px) and (max-width: 992px) {
-
-  /* use this query to apply style for 'small' desktop screens */
-
+    
+@media screen and (max-width: 399px) {
+    
+    .header-image {
+        display: none; 
+    }
+    
+    .chapter-image {
+        display: none; 
+    }
+    
+    
+    
 }
 
 
