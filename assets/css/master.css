@@ -21,11 +21,11 @@
 
 @font-face {
     font-family: 'Modor';
-    src: url('fonts/Modor/Modor-Regular.woff2') format('woff2'),
-         url('fonts/Modor/Modor-Regular.woff') format('woff'),
-         url('fonts/Modor/Modor-Regular.eot'),
-         url('fonts/Modor/Modor-Regular.otf') format('embedded-opentype'),
-         url('fonts/Modor/Modor-Regular.ttf') format('truetype');  
+    src: url('Modor-Regular.woff2') format('woff2'),
+         url('Modor-Regular.woff') format('woff'),
+         url('Modor-Regular.eot') format('embedded-opentype'),
+         url('Modor-Regular.otf') format('embedded-opentype'),
+         url('Modor-Regular.ttf') format('truetype');  
     font-weight: normal;
     font-style: normal;
     
@@ -37,16 +37,6 @@
     font-weight: normal;
     font-style: normal;
     
-}
-
-@font-face {
-    font-family: Modorek;
-    src: url(Modor-Regular.woff) format('woff');
-    src: url(Modor-Regular.woff2) format('woff2');
-    src: url(Modor-Regular.ttf) format('truetype');
-    src: url(Modor-Regular.otf) format('opentype');
-    src: url(Modor-Regular.eot) format('embedded-opentype');
-    font-weight: normal;   
 }
 
 
@@ -81,7 +71,7 @@ html {
 
 body {
     hyphens: auto; 
-    font-family: Modorek;
+    font-family: 'Modor';
 }
 
 .nav {
