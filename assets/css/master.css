@@ -35,8 +35,14 @@
 }
 
 @font-face {
-    font-family: Olcia;
+    font-family: Modorek;
     src: url(Modor-Regular.woff);
+    font-weight: normal;   
+}
+
+@font-face {
+    font-family: Ericia;
+    src: url(G2-Erika-Regular.woff);
     font-weight: normal;   
 }
 
@@ -71,7 +77,7 @@ html {
 
 body {
     hyphens: auto; 
-    font-family: Olcia;
+    font-family: Modorek;
 }
 
 .nav {
@@ -291,7 +297,8 @@ sup{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 calc(var(--margin)*2);
-    font: calc(var(--font-size)*1) var(--font-family);
+    font: calc(var(--font-size)*1);
+    font-family: Ericia;
     color: var(--color-text);
     text-align: justify;
     text-justify: inter-word;
