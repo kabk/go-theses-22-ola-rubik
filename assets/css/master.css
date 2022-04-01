@@ -57,7 +57,7 @@
   --color-text-link: rgba(255,255,255,1);
   --color-text-link-hover: rgba(0,255,0,1);
   /* Font settings */
-  --font-family: 'Erika', 'Modor', 'tex' 'Helvetica Condensed', 'Arial', sans-serif;
+  --font-family: 'tex', 'Erika', 'Modor', 'tex', 'Helvetica Condensed', 'Arial', sans-serif;
   --font-family-body-text: 'Modor', 'Helvetica Condensed', sans-serif;
   --font-family-initial-letter: 'ModorSwash', serif;
   --font-size: 18px;
@@ -298,7 +298,7 @@ sup{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 calc(var(--margin)*2);
-    font: calc(var(--font-size)*1) 'Erika';
+    font: calc(var(--font-size)*1) var(-font-family);
     color: var(--color-text);
     text-align: justify;
     text-justify: inter-word;
