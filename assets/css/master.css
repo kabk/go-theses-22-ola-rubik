@@ -59,7 +59,7 @@
   /* Font settings */
   --font-family: 'tex', 'Erika', 'Modor', 'tex', 'Helvetica Condensed', 'Arial', sans-serif;
   --font-family-body-text: 'Modor', 'Helvetica Condensed', sans-serif;
-  --font-family-initial-letter: 'ModorSwash', serif;
+  --font-family-initial-letter: 'ModorSwash', sans-serif;
   --font-size: 18px;
   /* Margins settings */
   --margin: 2rem;
@@ -688,7 +688,7 @@ sup{
     }
     
     .footnotes-box {
-        font-family: 'Erika';
+        font-family: var(--font-family);
     }
     
     
