@@ -21,11 +21,11 @@
 
 @font-face {
     font-family: 'Modor';
-    src: url('Modor-Regular.woff2') format('woff2'),
-         url('Modor-Regular.woff') format('woff'),
-         url('Modor-Regular.eot') format('embedded-opentype'),
-         url('Modor-Regular.otf') format('embedded-opentype'),
-         url('Modor-Regular.ttf') format('truetype');  
+    src: url('fonts/Modor/Modor-Regular.woff2') format('woff2'),
+         url('fonts/Modor/Modor-Regular.woff') format('woff'),
+         url('fonts/Modor/Modor-Regular.eot') format('embedded-opentype'),
+         url('fonts/Modor/Modor-Regular.otf') format('embedded-opentype'),
+         url('fonts/Modor/Modor-Regular.ttf') format('truetype');  
     font-weight: normal;
     font-style: normal;
     
