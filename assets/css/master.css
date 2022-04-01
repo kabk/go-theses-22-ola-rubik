@@ -34,6 +34,12 @@
     
 }
 
+@font-face {
+    font-family: Olcia;
+    src: url(Modor-Regular.woff);
+    font-weight: normal;   
+}
+
 /* VARIABLES */
 
 :root {
@@ -65,6 +71,7 @@ html {
 
 body {
     hyphens: auto; 
+    font-family: Olcia;
 }
 
 .nav {
