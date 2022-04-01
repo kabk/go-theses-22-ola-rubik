@@ -655,6 +655,10 @@ h2.chapter-name{
         display: none; 
     }
     
+    .footnotes-box {
+        font-family: var(--font-family);
+    }
+    
     
     
 }
