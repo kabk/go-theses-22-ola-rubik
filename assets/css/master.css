@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'Erika';
-    src: url('../fonts/Erika/G2-Erika-Regular.woff2') format('woff2'),
-         url('../fonts/Erika/G2-Erika-Regular.woff') format('woff'),
-         url('../fonts/Erika/G2-Erika-Regular.eot') ,
-         url('../fonts/Erika/G2-Erika-Regular.otf') format('embedded-opentype'),
-         url('../fonts/Erika/G2-Erika-Regular.ttf') format('truetype');  
+    src: url('fonts/Erika/G2-Erika-Regular.woff2') format('woff2'),
+         url('fonts/Erika/G2-Erika-Regular.woff') format('woff'),
+         url('fonts/Erika/G2-Erika-Regular.eot') ,
+         url('fonts/Erika/G2-Erika-Regular.otf') format('embedded-opentype'),
+         url('fonts/Erika/G2-Erika-Regular.ttf') format('truetype');  
     font-weight: normal;
     font-style: normal;
     
@@ -16,11 +16,11 @@
 
 @font-face {
     font-family: 'Modor';
-    src: url('../fonts/Modor/Modor-Regular.woff2') format('woff2'),
-         url('../fonts/Modor/Modor-Regular.woff') format('woff'),
-         url('../fonts/Modor/Modor-Regular.eot'),
-         url('../fonts/Modor/Modor-Regular.otf') format('embedded-opentype'),
-         url('../fonts/Modor/Modor-Regular.ttf') format('truetype');  
+    src: url('fonts/Modor/Modor-Regular.woff2') format('woff2'),
+         url('fonts/Modor/Modor-Regular.woff') format('woff'),
+         url('fonts/Modor/Modor-Regular.eot'),
+         url('fonts/Modor/Modor-Regular.otf') format('embedded-opentype'),
+         url('fonts/Modor/Modor-Regular.ttf') format('truetype');  
     font-weight: normal;
     font-style: normal;
     
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'ModorSwash';
-    src: url( '../fonts/Modor-Swash/Modor-Swash.otf' ) format( 'opentype' );
+    src: url( 'fonts/Modor-Swash/Modor-Swash.otf' ) format( 'opentype' );
     font-weight: normal;
     font-style: normal;
     
