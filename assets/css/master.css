@@ -4,9 +4,9 @@
 
 @font-face {
     font-family: 'Erika';
-    src: url('../fonts/Erika/G2-Erika-Regular.woff2') format('woff2'),
-         url('../fonts/Erika/G2-Erika-Regular.woff') format('woff'),
-         url('../fonts/Erika/G2-Erika-Regular.eot') ,
+    src: url('../fonts/Erika/G2-Erika-Regular.woff2'),
+         url('../fonts/Erika/G2-Erika-Regular.woff'),
+         url('../fonts/Erika/G2-Erika-Regular.eot'),
          url('../fonts/Erika/G2-Erika-Regular.otf') format('embedded-opentype'),
          url('../fonts/Erika/G2-Erika-Regular.ttf') format('truetype');  
     font-weight: normal;
@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'Modor';
-    src: url('../fonts/Modor/Modor-Regular.woff2') format('woff2'),
-         url('../fonts/Modor/Modor-Regular.woff') format('woff'),
+    src: url('../fonts/Modor/Modor-Regular.woff2'),
+         url('../fonts/Modor/Modor-Regular.woff'),
          url('../fonts/Modor/Modor-Regular.eot'),
          url('../fonts/Modor/Modor-Regular.otf') format('embedded-opentype'),
          url('../fonts/Modor/Modor-Regular.ttf') format('truetype');  
@@ -99,12 +99,6 @@ a:hover     {
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
     
-}
-
-.video-cover {
-    width: max(100%, 299px);
-    max-width: 100%;
-    height: auto; 
 }
 
 .wrapper-one {
@@ -228,10 +222,6 @@ h2.chapter-name{
     line-height: 0rem; 
 }
 
-sup{
-    line-height: 0rem; 
-}
-
 .special-sup{
     font: calc(var(--font-size)*1) var(--font-family-body-text);
     padding-right: calc(var(--margin)*0.4);
@@ -253,7 +243,10 @@ sup{
     color: white;
 }
 
-
+.endnotes,.b {
+  padding-left: calc(var(--margin)*1) ;
+  padding-right: calc(var(--margin)*1) ;
+}
 
 .chapter-container-endnotes{
     padding-top: calc((var(--margin))*1);
@@ -548,6 +541,7 @@ sup{
 }
 
 /* ----------------- */
+
 
 
 /*-------------------------------------------------------------------------*/
