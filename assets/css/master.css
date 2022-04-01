@@ -39,6 +39,14 @@
     
 }
 
+@font-face {
+    font-family: 'tex';
+    src: url('fonts/tex/texgyre.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
 /* VARIABLES */
 
 :root {
@@ -49,8 +57,8 @@
   --color-text-link: rgba(255,255,255,1);
   --color-text-link-hover: rgba(0,255,0,1);
   /* Font settings */
-  --font-family: 'Erika', 'Modor',, 'Helvetica Condensed', 'Arial', sans-serif;
-  --font-family-body-text: 'Modor',, 'Helvetica Condensed', sans-serif;
+  --font-family: 'Erika', 'Modor', 'tex' 'Helvetica Condensed', 'Arial', sans-serif;
+  --font-family-body-text: 'Modor', 'Helvetica Condensed', sans-serif;
   --font-family-initial-letter: 'ModorSwash', serif;
   --font-size: 18px;
   /* Margins settings */
