@@ -4,11 +4,16 @@
 
 @font-face {
     font-family: 'Erika';
-    src: url('fonts/Erika/G2-Erika-Regular.woff2') format('woff2'),
+    /*src: url('fonts/Erika/G2-Erika-Regular.woff2') format('woff2'),
          url('fonts/Erika/G2-Erika-Regular.woff') format('woff'),
          url('fonts/Erika/G2-Erika-Regular.eot') ,
          url('fonts/Erika/G2-Erika-Regular.otf') format('embedded-opentype'),
-         url('fonts/Erika/G2-Erika-Regular.ttf') format('truetype');  
+         url('fonts/Erika/G2-Erika-Regular.ttf') format('truetype');*/
+    src: url(G2-Erika-Regular.woff) format('woff'),
+         url(G2-Erika-Regular.woff2) format('woff2'),
+         url(G2-Erika-Regular.ttf) format('truetype'),
+         url(G2-Erika-Regular.otf) format('opentype'),
+         url(G2-Erika-Regular.eot) format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
     
@@ -36,15 +41,14 @@
 
 @font-face {
     font-family: Modorek;
-    src: url(Modor-Regular.woff);
+    src: url(Modor-Regular.woff) format('woff');
+    src: url(Modor-Regular.woff2) format('woff2');
+    src: url(Modor-Regular.ttf) format('truetype');
+    src: url(Modor-Regular.otf) format('opentype');
+    src: url(Modor-Regular.eot) format('embedded-opentype');
     font-weight: normal;   
 }
 
-@font-face {
-    font-family: Ericia;
-    src: url(G2-Erika-Regular.woff);
-    font-weight: normal;   
-}
 
 /* VARIABLES */
 
@@ -297,8 +301,7 @@ sup{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 calc(var(--margin)*2);
-    font: calc(var(--font-size)*1);
-    font-family: Ericia;
+    font: calc(var(--font-size)*1) 'Erika';
     color: var(--color-text);
     text-align: justify;
     text-justify: inter-word;
@@ -688,7 +691,7 @@ sup{
     }
     
     .footnotes-box {
-        font-family: var(--font-family);
+        font-family: 'Erika';
     }
     
     
