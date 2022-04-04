@@ -106,11 +106,12 @@ sup{
 
 .images{
     width: max(25%, 375px);
-    max-width: 30%;
+    max-width: 100%;
     height: auto; 
-    margin: 10px;
     float: left;
     border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .images:after {
@@ -119,7 +120,7 @@ sup{
 
 .images-ve{
     width: max(25%, 375px);
-    max-width: 100%;
+    max-width: 50%;
     height: auto; 
     position: relative;
     align-items: center;    
